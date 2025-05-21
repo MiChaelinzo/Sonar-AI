@@ -53,7 +53,7 @@ Built with Streamlit, it provides an intuitive interface for users to visualize 
 ## 📃 Repository Structure
 
 ```
-sonar_analysis_hub/
+Sonari-AI/
 ├── .streamlit/
 │   ├── secrets.toml          # Your actual API keys (gitignored)
 │   └── secrets.toml.example  # Example for API keys
@@ -176,11 +176,3 @@ flowchart TD
 *   **Data File Analysis:** For uploaded CSV or TXT files, a text preview (a snippet of the content) *is* sent to the Perplexity AI model along with your query when you ask it to analyze the file.
 *   **Context Handling:** Context from uploaded files (image references or text snippets) is typically cleared after one analysis query to the AI. This helps manage the conversation flow and API usage. You may need to refer to or re-upload a file if you wish to ask multiple, separate questions about it.
 ```
-
-**Remember to:**
-
-1.  Replace `<your-repository-url>` with the actual URL once you host it.
-2.  Find a suitable animated GIF and replace `YOUR_SONAR_GIF_URL_HERE` with its direct URL. You can search on sites like Giphy or create your own.
-3.  Review the "Repository Structure" section. If you decide to add an `assets/` folder for images (like the logo `https://i.imgur.com/sQju3dP.jpeg` used in the sidebar), you can mention it there.
-
-This README provides a comprehensive overview for anyone looking to understand, set up, and run your Sonar Analysis Hub application.
