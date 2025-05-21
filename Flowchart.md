@@ -1,49 +1,38 @@
 ```mermaid
 flowchart TD
-    A[Sonar Data Sources]
-    A1[Sea Sonar]
-    A2[Land Sonar]
-    A3[Air Sonar]
-    A --> A1
-    A --> A2
-    A --> A3
+    Sea[Sea Sonar]
+    Land[Land Sonar]
+    Air[Air Sonar]
+    Ingest[Data Ingestion]
+    Clean[Preprocessing and Cleaning]
+    Signal[Signal Processing]
+    Noise[Noise Reduction]
+    Fusion[Data Fusion and Alignment]
+    Viz[Visualization Engine]
+    AdvViz[Advanced Visualization]
+    Charts[Interactive Charts and Maps]
+    Patterns[Anomaly Detection]
+    AI[Perplexity AI Assistant]
+    UI[User Interface]
+    Users[Users]
 
-    B[Data Ingestion Layer]
-    A1 --> B
-    A2 --> B
-    A3 --> B
+    Sea --> Ingest
+    Land --> Ingest
+    Air --> Ingest
 
-    C[Preprocessing & Cleaning]
-    B --> C
-
-    D1[Signal Processing]
-    D2[Noise Reduction]
-    C --> D1
-    C --> D2
-
-    E[Data Fusion & Alignment]
-    D1 --> E
-    D2 --> E
-
-    F[Visualization Engine (Streamlit)]
-    E --> F
-
-    G1[Advanced Sonar Visualization]
-    G2[Interactive Charts & Maps]
-    G3[Anomaly & Pattern Detection]
-    F --> G1
-    F --> G2
-    F --> G3
-
-    H[Perplexity AI Assistant (Sonar Perplexity AI)]
-    G1 --> H
-    G2 --> H
-    G3 --> H
-
-    I[User Interface]
-    H --> I
-    F --> I
-
-    J[Users (Researchers, Operators, Public)]
-    I --> J
+    Ingest --> Clean
+    Clean --> Signal
+    Clean --> Noise
+    Signal --> Fusion
+    Noise --> Fusion
+    Fusion --> Viz
+    Viz --> AdvViz
+    Viz --> Charts
+    Viz --> Patterns
+    AdvViz --> AI
+    Charts --> AI
+    Patterns --> AI
+    AI --> UI
+    Viz --> UI
+    UI --> Users
 ```
