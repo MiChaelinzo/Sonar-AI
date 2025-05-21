@@ -53,3 +53,30 @@ Once the setup is complete, you can run the Streamlit application:
 
 ```bash
 streamlit run app.py
+```
+The application should open in your web browser.
+
+## AI Integration Notes
+The AI Assistant uses the Perplexity AI API (models like sonar-pro).
+
+When analyzing uploaded images, the AI does not receive the image data directly. It relies on your textual questions, any filename you mention, and its general knowledge to respond.
+
+When analyzing uploaded data files (CSV, TXT), a text preview of the file's content is sent to the AI along with your query.
+
+Context from uploaded files/images is cleared after each analysis query to the AI to manage token usage and focus.
+
+## Project Structure
+sonar_analysis_hub/
+├── .streamlit/
+│   ├── secrets.toml.example  # Example for API keys
+│   └── secrets.toml          # Your actual API keys (gitignored)
+├── app.py                    # Main Streamlit application code
+├── requirements.txt          # Python dependencies
+├── README.md                 # This file
+└── .gitignore                # Files to be ignored by Git
+
+Contributing
+(Optional: Add guidelines if you plan for others to contribute.)
+License
+(Optional: Add a license file if you wish, e.g., MIT, Apache 2.0.)
+
