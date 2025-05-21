@@ -7,9 +7,9 @@
 [![Perplexity AI](https://img.shields.io/badge/AI-Perplexity%20Sonar-9cf.svg)](https://perplexity.ai)
 <!-- Add other badges if relevant (e.g., License: MIT) -->
 
-The Sonar Analysis Hub is a web-based application designed for exploring simulated sonar data, uploading user-specific sonar-related files, and leveraging the analytical capabilities of Perplexity AI's Sonar models for insights and assistance.
+The Sonar Analysis Hub is a web-based application designed for exploring  sonar data, uploading user-specific sonar-related files, and leveraging the analytical capabilities of Perplexity AI's Sonar models for insights and assistance.
 
-Built with Streamlit, it provides an intuitive interface for users to visualize different types of simulated sonar scans (Sea, Land, Air), generate new scan data, upload their own images or data files, and interact with an AI assistant powered by Perplexity AI.
+Built with Streamlit, it provides an intuitive interface for users to visualize different types of  sonar scans (Sea, Land, Air), generate new scan data, upload their own images or data files, and interact with an AI assistant powered by Perplexity AI.
 
 ![SonarHub Demo](https://raw.githubusercontent.com/MiChaelinzo/Sonar-AI/d22d856a5e2b7ce96c7b05aca09df0cf10da3558/assets/sonarhub.gif)
 
@@ -18,13 +18,13 @@ Built with Streamlit, it provides an intuitive interface for users to visualize 
 ## ✨ Features
 
 *   **🤖 Perplexity AI Sonar Assistant:** Interact with an AI assistant to ask questions about sonar principles, data interpretation, target classification, or the hub's functionalities. The AI can also discuss user-uploaded content.
-*   **🛰️ Explore Simulated Scan Data:**
+*   **🛰️ Explore  Scan Data:**
     *   Load and visualize details from pre-defined sonar scans (Side-Scan Sonar, GPR, Ultrasonic).
-    *   View scan metadata, parameters, summaries, and simulated spectrograms/radargrams.
+    *   View scan metadata, parameters, summaries, and  spectrograms/radargrams.
     *   Examine lists of detected targets with their characteristics.
     *   Download scan data in JSON format.
 *   **💡 Simulate New Sonar Scans:**
-    *   Configure parameters (sonar type, area, frequency, range/depth, custom notes) to generate new simulated sonar scan data.
+    *   Configure parameters (sonar type, area, frequency, range/depth, custom notes) to generate new  sonar scan data.
     *   View and download the results of these simulations.
     *   Optionally add new simulations to the "Explore Scan Data" list for the current session.
 *   **⬆️ Upload & Analyze Sonar Data:**
