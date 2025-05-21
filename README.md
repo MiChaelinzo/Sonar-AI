@@ -37,6 +37,13 @@ Built with Streamlit, it provides an intuitive interface for users to visualize 
 
 ---
 
+## 🏗️ Prerequisites
+
+*   Python 3.8+
+*   Git (for cloning the repository)
+
+---
+
 ## 🛠️ Technology Stack
 
 *   **Framework:** Streamlit
