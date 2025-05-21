@@ -71,7 +71,7 @@ sonar_analysis_hub/
 1.  **Clone the Repository:**
     ```bash
     git clone <your-repository-url>
-    cd sonar_analysis_hub
+    cd Sonar-AI
     ```
 
 2.  **Create and Activate Virtual Environment (Recommended):**
@@ -99,17 +99,25 @@ sonar_analysis_hub/
         ```
     *   Open `.streamlit/secrets.toml` with a text editor.
     *   Replace `pplx-YOUR_PERPLEXITY_API_KEY_HERE` with your actual Perplexity AI API key.
-        ```toml
-        [perplexity_api]
-        api_key = "pplx-YOUR_ACTUAL_KEY"
-        ```
-    *   **IMPORTANT:** The `.gitignore` file is configured to prevent `secrets.toml` from being committed to version control. **Never commit your actual secrets file.**
+```
+# Copy this file to .streamlit/secrets.toml and fill in your API key.
+# IMPORTANT: DO NOT commit your actual secrets.toml file to version control.
+
+[perplexity_api]
+api_key = "pplx-YOUR_PERPLEXITY_API_KEY_HERE"
+
+# Example for a potential future Sonar Data API (currently a placeholder in the app)
+# [sonar_data_api]
+# base_url = "YOUR_SONAR_DATA_API_ENDPOINT"
+# api_key = "YOUR_SONAR_DATA_API_KEY"
+```
+*   **IMPORTANT:** The `.gitignore` file is configured to prevent `secrets.toml` from being committed to version control. **Never commit your actual secrets file.**
 
 ---
 
 ## ▶️ Running the App
 
-Ensure your virtual environment is activated and you are in the project's root directory (`sonar_analysis_hub/`).
+Ensure your virtual environment is activated and you are in the project's root directory (`Sonar-AI/`).
 
 Run the Streamlit application using:
 
@@ -120,6 +128,46 @@ streamlit run app.py
 The application should then open in your default web browser.
 
 ---
+
+## Flowchart 📊
+```mermaid
+flowchart TD
+    Sea[Sea Sonar]
+    Land[Land Sonar]
+    Air[Air Sonar]
+    Ingest[Data Ingestion]
+    Clean[Preprocessing and Cleaning]
+    Signal[Signal Processing]
+    Noise[Noise Reduction]
+    Fusion[Data Fusion and Alignment]
+    Viz[Visualization Engine]
+    AdvViz[Advanced Visualization]
+    Charts[Interactive Charts and Maps]
+    Patterns[Anomaly Detection]
+    AI[Perplexity AI Assistant]
+    UI[User Interface]
+    Users[Users]
+
+    Sea --> Ingest
+    Land --> Ingest
+    Air --> Ingest
+
+    Ingest --> Clean
+    Clean --> Signal
+    Clean --> Noise
+    Signal --> Fusion
+    Noise --> Fusion
+    Fusion --> Viz
+    Viz --> AdvViz
+    Viz --> Charts
+    Viz --> Patterns
+    AdvViz --> AI
+    Charts --> AI
+    Patterns --> AI
+    AI --> UI
+    Viz --> UI
+    UI --> Users
+```
 
 ## 🤖 AI Integration Notes
 
