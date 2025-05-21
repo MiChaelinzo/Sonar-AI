@@ -1,82 +1,138 @@
 # Sonar Analysis Hub 📡 (with Perplexity AI)
 
-A Streamlit web application for visualizing simulated sonar data, uploading user data for AI-assisted analysis, and learning about sonar technologies. This version integrates Perplexity AI for its AI Assistant capabilities.
+**Entry for the Perplexity AI Hackathon**
 
-## Features
+[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Streamlit](https://img.shields.io/badge/Streamlit-Framework-orange.svg)](https://streamlit.io)
+[![Perplexity AI](https://img.shields.io/badge/AI-Perplexity%20Sonar-9cf.svg)](https://perplexity.ai)
+<!-- Add other badges if relevant (e.g., License: MIT) -->
 
-*   **Explore Simulated Scans:** View pre-defined sonar scan data (Sea, Land, Air).
-*   **Simulate New Scans:** Generate new sonar data based on user-defined parameters.
-*   **Upload & Analyze:**
-    *   Upload sonar-related images (PNG, JPG).
-    *   Upload basic sonar data files (CSV, TXT).
-    *   Utilize the Perplexity AI Assistant in the sidebar to discuss uploaded content (images are discussed by name/reference, text data snippets are sent to the AI).
-*   **Sonar Technologies:** Information on various sonar systems and AI applications in the field.
-*   **Perplexity AI Assistant:** Ask general sonar-related questions or request analysis of uploaded content.
+The Sonar Analysis Hub is a web-based application designed for exploring simulated sonar data, uploading user-specific sonar-related files, and leveraging the analytical capabilities of Perplexity AI's Sonar models for insights and assistance.
 
-## Prerequisites
+Built with Streamlit, it provides an intuitive interface for users to visualize different types of simulated sonar scans (Sea, Land, Air), generate new scan data, upload their own images or data files, and interact with an AI assistant powered by Perplexity AI.
 
-*   Python 3.8+
-*   Git (for cloning the repository)
+![Sonar Analysis Hub In Action](YOUR_SONAR_GIF_URL_HERE) <!-- Replace with a relevant GIF URL -->
 
-## Setup Instructions
+---
 
-1.  **Clone the repository:**
+## ✨ Features
+
+*   **🤖 Perplexity AI Sonar Assistant:** Interact with an AI assistant to ask questions about sonar principles, data interpretation, target classification, or the hub's functionalities. The AI can also discuss user-uploaded content.
+*   **🛰️ Explore Simulated Scan Data:**
+    *   Load and visualize details from pre-defined sonar scans (Side-Scan Sonar, GPR, Ultrasonic).
+    *   View scan metadata, parameters, summaries, and simulated spectrograms/radargrams.
+    *   Examine lists of detected targets with their characteristics.
+    *   Download scan data in JSON format.
+*   **💡 Simulate New Sonar Scans:**
+    *   Configure parameters (sonar type, area, frequency, range/depth, custom notes) to generate new simulated sonar scan data.
+    *   View and download the results of these simulations.
+    *   Optionally add new simulations to the "Explore Scan Data" list for the current session.
+*   **⬆️ Upload & Analyze Sonar Data:**
+    *   Upload sonar-related images (PNG, JPG, JPEG) for display.
+    *   Upload sonar-related data files (CSV, TXT) for preview.
+    *   Engage the Perplexity AI Assistant to discuss uploaded images (by name/reference) or analyze text snippets from uploaded data files.
+*   **🛠️ Sonar Technologies Information:**
+    *   Access descriptive information about various sonar technologies like Side-Scan Sonar (SSS), Multi-Beam Echosounders (MBES), Ground Penetrating Radar (GPR), Ultrasonic Sensors, and the role of AI in sonar classification.
+*   **🎨 Themed UI:** Custom-styled Streamlit interface with a dark, modern aesthetic suitable for data analysis.
+
+---
+
+## 🛠️ Technology Stack
+
+*   **Framework:** Streamlit
+*   **AI Model:** Perplexity AI Sonar Models (e.g., `sonar-pro`) via the `openai` Python library.
+*   **Data Handling & Numerics:** `pandas`, `numpy`
+*   **Plotting & Visualization:** `plotly.express`
+*   **Image Handling:** `Pillow` (PIL)
+*   **API Interaction (for Perplexity):** `openai`
+*   **File Handling:** `io`, `json`
+*   **Utilities:** `datetime`, `time`, `re`
+
+---
+
+## 📃 Repository Structure
+
+```
+sonar_analysis_hub/
+├── .streamlit/
+│   ├── secrets.toml          # Your actual API keys (gitignored)
+│   └── secrets.toml.example  # Example for API keys
+├── app.py                    # Main Streamlit application code
+├── requirements.txt          # Python dependencies
+├── README.md                 # This file
+└── .gitignore                # Files to be ignored by Git
+```
+*(Note: Additional assets like images for the UI could be placed in an `assets/` directory if desired)*
+
+---
+
+## 🚀 Setup & Installation
+
+1.  **Clone the Repository:**
     ```bash
     git clone <your-repository-url>
     cd sonar_analysis_hub
     ```
 
-2.  **Create and activate a virtual environment (recommended):**
+2.  **Create and Activate Virtual Environment (Recommended):**
     ```bash
-    # For Unix/macOS
-    python3 -m venv venv
-    source venv/bin/activate
-
-    # For Windows
     python -m venv venv
-    .\venv\Scripts\activate
+    # On Windows:
+    # .\venv\Scripts\activate
+    # On macOS/Linux:
+    # source venv/bin/activate
     ```
 
-3.  **Install dependencies:**
+3.  **Install Dependencies:**
     ```bash
     pip install -r requirements.txt
     ```
 
-4.  **Configure API Keys:**
-    *   Create a `.streamlit` directory if it doesn't exist: `mkdir .streamlit`
-    *   Copy the example secrets file: `cp .streamlit/secrets.toml.example .streamlit/secrets.toml`
-    *   Open `.streamlit/secrets.toml` and replace `"pplx-YOUR_PERPLEXITY_API_KEY_HERE"` with your actual Perplexity AI API key.
+4.  **Configure Secrets for Perplexity AI:**
+    *   If it doesn't exist, create the `.streamlit` directory in the project root: `mkdir .streamlit`
+    *   Copy the example secrets file:
+        ```bash
+        # On Windows (PowerShell):
+        # copy .streamlit\secrets.toml.example .streamlit\secrets.toml
+        # On macOS/Linux:
+        # cp .streamlit/secrets.toml.example .streamlit/secrets.toml
+        ```
+    *   Open `.streamlit/secrets.toml` with a text editor.
+    *   Replace `pplx-YOUR_PERPLEXITY_API_KEY_HERE` with your actual Perplexity AI API key.
+        ```toml
+        [perplexity_api]
+        api_key = "pplx-YOUR_ACTUAL_KEY"
+        ```
+    *   **IMPORTANT:** The `.gitignore` file is configured to prevent `secrets.toml` from being committed to version control. **Never commit your actual secrets file.**
 
-## Running the Application
+---
 
-Once the setup is complete, you can run the Streamlit application:
+## ▶️ Running the App
+
+Ensure your virtual environment is activated and you are in the project's root directory (`sonar_analysis_hub/`).
+
+Run the Streamlit application using:
 
 ```bash
 streamlit run app.py
 ```
-The application should open in your web browser.
 
-## AI Integration Notes
-The AI Assistant uses the Perplexity AI API (models like sonar-pro).
+The application should then open in your default web browser.
 
-When analyzing uploaded images, the AI does not receive the image data directly. It relies on your textual questions, any filename you mention, and its general knowledge to respond.
+---
 
-When analyzing uploaded data files (CSV, TXT), a text preview of the file's content is sent to the AI along with your query.
+## 🤖 AI Integration Notes
 
-Context from uploaded files/images is cleared after each analysis query to the AI to manage token usage and focus.
+*   The AI Assistant leverages Perplexity AI's Sonar models. Ensure your API key is correctly configured.
+*   **Image Analysis:** When you upload an image and ask the AI about it, the AI does *not* receive the image data directly. It will attempt to discuss the image based on its filename (if you mention it) and your textual description or query. The system prompt guides the AI on this.
+*   **Data File Analysis:** For uploaded CSV or TXT files, a text preview (a snippet of the content) *is* sent to the Perplexity AI model along with your query when you ask it to analyze the file.
+*   **Context Handling:** Context from uploaded files (image references or text snippets) is typically cleared after one analysis query to the AI. This helps manage the conversation flow and API usage. You may need to refer to or re-upload a file if you wish to ask multiple, separate questions about it.
+```
 
-## Project Structure
-sonar_analysis_hub/
-├── .streamlit/
-│   ├── secrets.toml.example  # Example for API keys
-│   └── secrets.toml          # Your actual API keys (gitignored)
-├── app.py                    # Main Streamlit application code
-├── requirements.txt          # Python dependencies
-├── README.md                 # This file
-└── .gitignore                # Files to be ignored by Git
+**Remember to:**
 
-Contributing
-(Optional: Add guidelines if you plan for others to contribute.)
-License
-(Optional: Add a license file if you wish, e.g., MIT, Apache 2.0.)
+1.  Replace `<your-repository-url>` with the actual URL once you host it.
+2.  Find a suitable animated GIF and replace `YOUR_SONAR_GIF_URL_HERE` with its direct URL. You can search on sites like Giphy or create your own.
+3.  Review the "Repository Structure" section. If you decide to add an `assets/` folder for images (like the logo `https://i.imgur.com/sQju3dP.jpeg` used in the sidebar), you can mention it there.
 
+This README provides a comprehensive overview for anyone looking to understand, set up, and run your Sonar Analysis Hub application.
