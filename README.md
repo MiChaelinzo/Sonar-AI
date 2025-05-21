@@ -11,7 +11,7 @@ The Sonar Analysis Hub is a web-based application designed for exploring simulat
 
 Built with Streamlit, it provides an intuitive interface for users to visualize different types of simulated sonar scans (Sea, Land, Air), generate new scan data, upload their own images or data files, and interact with an AI assistant powered by Perplexity AI.
 
-![Sonar Analysis Hub In Action](YOUR_SONAR_GIF_URL_HERE) <!-- Replace with a relevant GIF URL -->
+![SonarHub Demo](https://raw.githubusercontent.com/MiChaelinzo/Sonar-AI/d22d856a5e2b7ce96c7b05aca09df0cf10da3558/assets/sonarhub.gif)
 
 ---
 
