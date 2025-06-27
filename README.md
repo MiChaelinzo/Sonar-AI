@@ -2,10 +2,16 @@
 
 **Entry for the Perplexity AI Hackathon**
 
-[![Python Version](https://img.shields.io/badge/python-3.9%2B-blue.svg)](https://www.python.org/)
+[![Python Version](https://img.shields.io/badge/python-3.11%2B-blue.svg)](https://www.python.org/)
 [![Streamlit](https://img.shields.io/badge/Streamlit-Framework-orange.svg)](https://streamlit.io)
 [![Perplexity AI](https://img.shields.io/badge/AI-Perplexity%20Sonar-9cf.svg)](https://perplexity.ai)
 <!-- Add other badges if relevant (e.g., License: MIT) -->
+**Devpost Submission:** [Sonar Analysis Hub (Sea, Land, Air) with Perplexity AI]([https://devpost.com/software/world-movers-ai-agent-customer-service-marketing-agent](https://devpost.com/software/sonar-analysis-hub-with-perxplexity-ai?ref_content=user-portfolio&ref_feature=in_progress))
+*(Note: This is a project developed for the "AI in Action: Google Cloud Hackathon")*
+
+## 🚀 Live Demo
+
+#### 🤖✈️👉 **[Launch the Sonar AI][(https://world-movers-ai-agent-assistant-1075731580935.us-central1.run.app/)](https://sonair.streamlit.app/)** *(Link to be updated if necessary)*
 
 The Sonar Analysis Hub is a web-based application designed for exploring  sonar data, uploading user-specific sonar-related files, and leveraging the analytical capabilities of Perplexity AI's Sonar models for insights and assistance.
 
