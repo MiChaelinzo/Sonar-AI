@@ -6,8 +6,7 @@
 [![Streamlit](https://img.shields.io/badge/Streamlit-Framework-orange.svg)](https://streamlit.io)
 [![Perplexity AI](https://img.shields.io/badge/AI-Perplexity%20Sonar-9cf.svg)](https://perplexity.ai)
 <!-- Add other badges if relevant (e.g., License: MIT) -->
-**Devpost Submission:** [Sonar Analysis Hub (Sea, Land, Air) with Perplexity AI]([https://devpost.com/software/world-movers-ai-agent-customer-service-marketing-agent](https://devpost.com/software/sonar-analysis-hub-with-perxplexity-ai?ref_content=user-portfolio&ref_feature=in_progress)
-*(Note: This is a project developed for the "Perplexity Hackathon")*
+**Devpost Submission:** [Sonar Analysis Hub (Sea, Land, Air) with Perplexity AI](https://devpost.com/software/sonar-analysis-hub-with-perxplexity-ai?ref_content=user-portfolio&ref_feature=in_progress) *(Note: This is a project developed for the "Perplexity Hackathon")*
 
 ## 🚀 Live Demo
 
