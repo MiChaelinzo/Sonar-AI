@@ -11,7 +11,7 @@
 
 ## 🚀 Live Demo
 
-#### 🤖✈️👉 **[Launch the Sonar AI][(https://world-movers-ai-agent-assistant-1075731580935.us-central1.run.app/)](https://sonair.streamlit.app/)** *(Link to be updated if necessary)*
+#### 🤖✈️👉 **[Launch the Sonar AI][(https://sonair.streamlit.app/)]** *(Link to be updated if necessary)*
 
 The Sonar Analysis Hub is a web-based application designed for exploring  sonar data, uploading user-specific sonar-related files, and leveraging the analytical capabilities of Perplexity AI's Sonar models for insights and assistance.
 
